@@ -118,8 +118,8 @@
     <h2>印度、日本本土直邮代购</h2>
     <p>我们提供印度代购、日本代购服务，一件代发,少走弯路。</p>
 
-    <div class="contact">微信号: <span id="wechat">kwzyyy</span></div>
-    <button class="btn" onclick="copyWechat()">复制微信号</button>
+    <div class="contact">微信: <span id="wechat">kwzyyy</span></div>
+    <button class="btn" onclick="copyWechat()">复制微信</button>
   </main>
 
   <footer>
@@ -130,7 +130,7 @@
     function copyWechat() {
       const wechat = document.getElementById("wechat").innerText;
       navigator.clipboard.writeText(wechat).then(() => {
-        alert("微信号已复制: " + wechat);
+        alert("微信已复制: " + wechat);
       });
     }
   </script>
