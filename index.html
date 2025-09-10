@@ -3,39 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>一件代发</title>
+  
+  <!-- 标题 -->
+  <title>印度代购 | 日本代购 | 一件代发</title>
+  
+  <!-- 页面描述（搜索引擎摘要） -->
+  <meta name="description" content="印度、日本本土直邮代购，一件代发服务，快速安全送到手。微信联系代购：kwzyyy。">
+  
+  <!-- SEO关键词（百度/谷歌） -->
+  <meta name="keywords" content="印度代购,日本代购,一件代发,本土直邮,代购服务,微信代购">
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     body {
       margin: 0;
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
       background-color: #ffffff;
       color: #333333;
-      text-align: center;
-      padding: 40px 20px;
       line-height: 1.8;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
-    main {
-      flex: 1;
+    header {
+      position: fixed; /* 固定顶部 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 15px;
     }
     h1 {
-      font-size: 2.8em;
+      font-size: 1.8em;
+      color: #0073e6;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #0073e6;
       margin-bottom: 0.5em;
-      color: #0073e6; /* 标题蓝色 */
     }
     p {
       font-size: 1.2em;
       margin: 0.3em 0;
-      color: #555555; /* 灰色说明文字 */
+      color: #555555;
     }
     .contact {
       margin-top: 2em;
       font-size: 1.2em;
       font-weight: bold;
-      color: #0073e6; /* 微信号蓝色 */
+      color: #0073e6;
     }
     .btn {
       display: inline-block;
@@ -59,13 +92,41 @@
       font-size: 0.9em;
       color: #888888;
       border-top: 1px solid #e0e0e0;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        width: 35px;
+        margin-right: 10px;
+      }
+      h1 {
+        font-size: 1.4em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      p, .contact, .btn {
+        font-size: 1em;
+      }
+      .btn {
+        padding: 10px 20px;
+      }
+      main {
+        padding: 120px 15px 40px;
+      }
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
+    <img src="logo.png" alt="IDF 印度 日本 代购 LOGO" class="logo">
     <h1>一件代发</h1>
-    <p>印度 / 日本 本土直邮 · 一件代发.不走弯路</p>
+  </header>
+
+  <main>
+    <h2>印度、日本本土直邮代购</h2>
+    <p>我们提供印度代购、日本代购服务，一件代发快速安全送到手。</p>
 
     <div class="contact">微信号: <span id="wechat">kwzyyy</span></div>
     <button class="btn" onclick="copyWechat()">复制微信号</button>
