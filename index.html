@@ -3,42 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>印度代购</title>
+  <title>一件代发</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
-      font-family: "Microsoft YaHei", "PingFang SC", "Arial", sans-serif;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
       background-color: #ffffff;
       color: #333333;
+      text-align: center;
+      padding: 40px 20px;
+      line-height: 1.8;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-bottom: 0.5em;
+      color: #0073e6; /* 标题蓝色 */
     }
     p {
       font-size: 1.2em;
       margin: 0.3em 0;
-      line-height: 1.6;
+      color: #555555; /* 灰色说明文字 */
     }
     .contact {
-      margin-top: 1.5em;
-      font-size: 1.1em;
-      color: #0073e6;
+      margin-top: 2em;
+      font-size: 1.2em;
       font-weight: bold;
+      color: #0073e6; /* 微信号蓝色 */
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      color: #fff;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #005bb5;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 15px 0;
+      font-size: 0.9em;
+      color: #888888;
+      border-top: 1px solid #e0e0e0;
     }
   </style>
 </head>
 <body>
-  <h1>印度代购</h1>
-  <p>印度 / 日本 本土直邮</p>
-  <p>一件代发 · 不走弯路</p>
-  <div class="contact">微信: kwzyyy</div>
+  <main>
+    <h1>一件代发</h1>
+    <p>印度 / 日本 本土直邮 · 一件代发.不走弯路</p>
+
+    <div class="contact">微信号: <span id="wechat">kwzyyy</span></div>
+    <button class="btn" onclick="copyWechat()">复制微信号</button>
+  </main>
+
+  <footer>
+    © 2025 一件代发 | All Rights Reserved
+  </footer>
+
+  <script>
+    function copyWechat() {
+      const wechat = document.getElementById("wechat").innerText;
+      navigator.clipboard.writeText(wechat).then(() => {
+        alert("微信号已复制: " + wechat);
+      });
+    }
+  </script>
 </body>
 </html>
