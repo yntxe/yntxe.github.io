@@ -18,7 +18,7 @@
       min-height: 100vh;
     }
     header {
-      position: fixed; /* 固定顶部 */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -84,7 +84,6 @@
       border-top: 1px solid #e0e0e0;
       text-align: center;
     }
-
     @media screen and (max-width: 480px) {
       .logo {
         width: 35px;
@@ -113,22 +112,21 @@
     <img src="logo.png" alt="IDF 印度 日本 代购 LOGO" class="logo">
     <h1>一件代发</h1>
   </header>
-
   <main>
     <h2>印度、日本本土直邮代购</h2>
     <p>我们提供印度代购、日本代购服务，一件代发, 让您少走弯路。</p>
 
-    <div class="contact">微信: <span id="wechat">kwzyyy</span></div>
+    <!-- 微信号隐藏处理 -->
+    <div class="contact">微信: <span id="wechat" style="display:none;">kwzyyy</span></div>
     <button class="btn" onclick="copyWechat()">复制微信</button>
   </main>
-
   <footer>
     © 2025 一件代发 | All Rights Reserved
   </footer>
 
   <script>
     function copyWechat() {
-      const wechat = document.getElementById("wechat").innerText;
+      const wechat = "kwzyyy"; // 微信号直接写在JS里，不显示在页面
       navigator.clipboard.writeText(wechat).then(() => {
         alert("微信已复制: " + wechat);
       });
